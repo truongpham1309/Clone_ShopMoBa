@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import { RouterOutlet } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-layout-admin',
@@ -11,5 +12,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './layout-admin.component.css'
 })
 export class LayoutAdminComponent {
-
+  
 }
