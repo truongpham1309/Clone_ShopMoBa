@@ -2,6 +2,14 @@
 
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <h1 class="font-bold text-center py-5 uppercase ">Products List Admin</h1>
+    <div class="w-full text-sm text-gray-500 my-5 text-right">
+        <a class="px-2 py-3 bg-green-500 rounded-md text-white font-medium" href="product_add">
+            <button>
+                Create Products
+            </button>
+        </a>
+    </div>
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50  ">
             <tr>
@@ -23,8 +31,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr
-                class="odd:bg-white  even:bg-gray-50  border-b ">
+            <tr class="odd:bg-white  even:bg-gray-50  border-b ">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                     Apple MacBook Pro 17"
                 </th>
@@ -38,7 +45,8 @@
                     $2999
                 </td>
                 <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
+                    <button class="bg-green-500 text-white px-4 py-2 rounded-md"><a href="">Edit</a></button>
+                    <button class="bg-red-500 text-white px-4 py-2 ml-2 rounded-md">Remove</button>
                 </td>
             </tr>
         </tbody>
@@ -54,22 +62,29 @@
             <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                 <div class="sm:col-span-2">
                     <label for="name" class="block mb-2 text-sm font-medium text-gray-900 ">Product Name</label>
-                    <input type="text" name="name" id="name" class="bg-gray-50 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Type product name">
+                    <input type="text" name="name" id="name"
+                        class="bg-gray-50 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                        placeholder="Type product name">
                     <span class="text-sm text-red-500 "></span>
                 </div>
                 <div class="w-full">
                     <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 ">Brand</label>
-                    <input type="text" name="brand" id="brand" class="bg-gray-50 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Product brand" required="">
+                    <input type="text" name="brand" id="brand"
+                        class="bg-gray-50 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                        placeholder="Product brand" required="">
                     <span class="text-sm text-red-500 "></span>
                 </div>
                 <div class="w-full">
                     <label for="price" class="block mb-2 text-sm font-medium text-gray-900 ">Price</label>
-                    <input type="number" name="price" id="price" class="bg-gray-50 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="$2999" required="">
+                    <input type="number" name="price" id="price"
+                        class="bg-gray-50 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                        placeholder="$2999" required="">
                     <span class="text-sm text-red-500 "></span>
                 </div>
                 <div>
                     <label for="category" class="block mb-2 text-sm font-medium text-gray-900 ">Category</label>
-                    <select id="category" class="bg-gray-50 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 ">
+                    <select id="category"
+                        class="bg-gray-50 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 ">
                         <option selected="">Select category</option>
                         <option value="TV">TV/Monitors</option>
                         <option value="PC">PC</option>
@@ -80,17 +95,22 @@
                 </div>
                 <div>
                     <label for="item-weight" class="block mb-2 text-sm font-medium text-gray-900 ">Image</label>
-                    <input type="number" name="image" id="image" class="bg-gray-50 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="image" required="">
+                    <input type="number" name="image" id="image"
+                        class="bg-gray-50 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                        placeholder="image" required="">
                     <span class="text-sm text-red-500 "></span>
-                </div> 
+                </div>
                 <div class="sm:col-span-2">
                     <label for="description" class="block mb-2 text-sm font-medium text-gray-900 ">Description</label>
-                    <textarea id="description" rows="8" class="  outline-none block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 " placeholder="Your description here"></textarea>
+                    <textarea id="description" rows="8"
+                        class="  outline-none block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 "
+                        placeholder="Your description here"></textarea>
                 </div>
             </div>
-            <button type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+            <button type="submit"
+                class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-blue-500 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
                 Add product
             </button>
         </form>
     </div>
-  </section>
+</section>
