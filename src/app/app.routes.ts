@@ -4,7 +4,7 @@ import { TextComponent } from './components/pages/text/text.component';
 
 export const routes: Routes = [
     {
-        path: "admin",
+        path: "",
         component: LayoutAdminComponent,
         children: [
             {
