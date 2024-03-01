@@ -1,97 +1,433 @@
-<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
-    type="button"
-    class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200   dark:focus:ring-gray-600">
-    <span class="sr-only">Open sidebar</span>
-    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <path clip-rule="evenodd" fill-rule="evenodd"
-            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-        </path>
-    </svg>
-</button>
+<section class="tw-fullscreen">
 
-<aside id="default-sidebar"
-    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-    aria-label="Sidebar">
-    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 ">
-        <ul class="space-y-2 font-medium">
-            <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group">
-                    <svg class="w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 "
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
-                        <path
-                            d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                        <path
-                            d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                    </svg>
-                    <span class="ms-3">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="laptop" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group">
-                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 "
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                        <path
-                            d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
-                    </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Products</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group">
-                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 "
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
-                        <path
-                            d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
-                    </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
+
+    <div class="tw-sticky tw-top-0 tw-bg-white tw-border-b tw-border-gray-100 tw-mb-2" style="z-index: 1000;">
+        <div class="tw-max-w-6xl tw-mx-auto tw-flex tw-justify-between tw-items-center tw-px-2 tw-py-1 md:tw-py-2">
+            <div class="tw-menu-left tw-flex tw-items-center">
+                <a href="/home"><img src="https://shopmoba.vn/tep-tin/69332079503.gif" class="tw-h-10"></a>
+                <a data-modal-toggle="login"
+                    class="tw-hidden md:tw-flex tw-ml-10 tw-font-bold tw-text-red-600 hover:tw-text-red-500 tw-px-3 tw-text-sm tw-items-center tw-cursor-pointer">
                     <span
-                        class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full ">Pro</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group">
-                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 "
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z" />
-                    </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
+                        class="tw-inline-flex tw-items-center tw-justify-center tw-h-6 tw-w-7 tw-rounded tw-bg-red-100 tw-mr-2"><i
+                            class="tw-text-lg bx bx-dollar"></i></span>
 
+                    NẠP THẺ
                 </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group">
-                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 "
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                        <path
-                            d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
-                    </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
+
+                <a class="tw-hidden md:tw-flex tw-text-red-600 hover:tw-text-red-500 tw-ml-2 tw-font-bold tw-px-3 tw-text-sm tw-items-center tw-cursor-pointer"
+                    type="button" data-modal-toggle="login">
+                    <span
+                        class="tw-inline-flex tw-items-center tw-justify-center tw-h-6 tw-w-7 tw-rounded tw-bg-red-100 tw-mr-2"><i
+                            class="tw-text-lg bx bx-credit-card-front"></i></span>
+                    NẠP ATM/MOMO
                 </a>
-            </li>
-            <li>
-                <a href="/register" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group">
-                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 "
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z" />
-                        <path
-                            d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z" />
-                        <path
-                            d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z" />
-                    </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group">
-                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 "
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
-                    </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Log out</span>
-                </a>
-            </li>
-        </ul>
+
+
+            </div>
+            <div class="tw-menu-right tw-flex tw-flex-wrap tw-items-center tw-justify-right">
+
+
+
+
+
+
+                <button class="
+tw-bg-red-500
+tw-transition
+tw-duration-200
+tw-text-white
+tw-text-sm
+tw-px-4
+tw-rounded-full
+tw-font-semibold
+tw-h-8
+md:tw-h-10
+tw-relative
+" data-modal-toggle="login"> <span class="tw-hidden md:tw-inline-block"><i class="tw-absolute tw-text-lg bx bxs-user"
+                            style="top: 10px"></i></span> <span class="md:tw-ml-6">ĐĂNG NHẬP</span></button>
+
+            </div>
+        </div>
+        <!---->
+        <!---->
     </div>
-</aside>
+
+
+    <div id="defaultModal" tabindex="-1" aria-hidden="true"
+        class="hidden tw-preview tw-fixed tw-top-0 tw-right-0 tw-left-0 tw-bottom-0 tw-flex tw-items-center tw-justify-center tw-p-2 justify-center items-center"
+        style="z-index: 1001; background: rgba(93, 93, 93, 0.77); overflow-y: auto; max-height: 100vh;">
+        <div class="tw-relative tw-max-w-md tw-w-full tw-mx-auto tw-bg-white tw-rounded" id="defaultModal">
+            <span
+                class="tw-absolute tw-inline-block tw-px-3 tw-h-8 tw-w-8 tw-flex tw-items-center tw-justify-center tw-border-4 tw-border-white tw-rounded-full tw-text-sm tw-font-bold tw-cursor-pointer tw-py-1 tw-text-white tw-bg-gray-800"
+                style="top: -15px; right: -5px; z-index: 100;" data-modal-toggle="defaultModal">
+                <i class="bx bx-x"></i>
+            </span>
+            <div
+                class="tw-bg-red-600 tw-text-white tw-font-semibold tw-text-center tw-rounded-t tw-grid tw-grid-cols-12 tw-gap-0">
+                <div class="tw-col-span-12 tw-py-3 tw-rounded-t tw-font-bold">
+                    NẠP TIỀN - CHUYỂN KHOẢN QUA
+                </div>
+            </div>
+            <div class="tw-p-3 tw-py-4 md:tw-p-4 tw-pb-8 md:tw-pb-8">
+                <div class="tw-grid tw-grid-cols-12 tw-gap-4">
+                    <div class="tw-col-span-12 md:tw-col-span-6">
+                        <button
+                            class="tw-w-full tw-bg-gray-200 hover:tw-bg-gray-300 tw-rounded tw-flex tw-items-center tw-h-12 tw-px-4"
+                            data-modal-toggle="atm">
+                            <img class="tw-w-6 lazyLoad isLoaded" src="/bank.png"> <span
+                                class="tw-ml-2 tw-font-semibold tw-text-gray-800">Ngân Hàng (ATM)</span>
+                        </button>
+                    </div>
+                    <div class="tw-col-span-12 md:tw-col-span-6">
+                        <button
+                            class="tw-w-full tw-bg-gray-200 hover:tw-bg-gray-300 tw-rounded tw-flex tw-items-center tw-h-12 tw-px-4"
+                            data-modal-toggle="momo">
+                            <img class="tw-w-6 lazyLoad isLoaded" src="/momo.png"> <span
+                                class="tw-ml-2 tw-font-semibold tw-text-gray-800">Ứng dụng MOMO</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tw-mt-4">
+                    <div class="tw-text-sm tw-font-semibold tw-text-gray-700">
+                        <p>
+                            <span><i class="bx bx-caret-right"></i></span> Hệ thống nạp <b
+                                class="tw-text-red-600">ATM/MOMO tự động 24/24</b>, Nạp 100k nhận 125k tiền shop
+                        </p>
+                        <p>
+                            <span><i class="bx bx-caret-right"></i></span><b> Lưu ý: </b> Chuyển tiền nhanh 24/7 để
+                            tránh bị treo, chậm tiền! Nếu gửi đúng stk và nội dung mà 30p không nhận được tiền hoặc
+                            chuyển ghi sai nội dung vui lòng liên hệ
+                            page để được hỗ trợ.
+                        </p>
+                    </div>
+                </div>
+                <div class="tw-mt-4">
+                    <label class="tw-uppercase tw-text-red-600 tw-font-bold tw-text-sm tw-block tw-mb-2">
+                        Quy Đổi Tiền Nạp ATM/MOMO
+                    </label>
+                    <div class="tw-flex tw-justify-between tw-items-center">
+                        <div class="tw-2/5">
+                            <div class="tw-w-full tw-relative">
+                                <label class="tw-inline-block tw-text-gray-600 tw-absolute tw-text-xs tw-font-medium"
+                                    style="left: 10px; top: 6px;">
+                                    Số tiền bạn chuyển
+                                </label>
+                                <input type="number" placeholder="ví dụ: 100000"
+                                    class="focus:tw-outline-none tw-pt-3 tw-px-2 tw-h-12 tw-rounded tw-border-2 tw-border-gray-300 tw-w-full tw-text-sm tw-font-semibold tw-placeholder-gray-800 focus:tw-placeholder-white focus:tw-border-red-500 tw-transition tw-duration-200">
+                            </div>
+
+                            <span class="tw-mt-1 tw-absolute tw-text-xs tw-block tw-font-semibold"><i
+                                    class="tw-relative tw-font-bold bx bx-subdirectory-right" style="top: 1px;"></i>
+                                0đ</span>
+                        </div>
+                        <div class="tw-1/5"><i class="bx bx-transfer-alt tw-text-gray-600 tw-text-lg"></i></div>
+                        <div class="tw-2/5">
+                            <div class="tw-w-full tw-relative">
+                                <label class="tw-inline-block tw-text-gray-600 tw-absolute tw-text-xs tw-font-medium"
+                                    style="left: 10px; top: 6px;">
+                                    Tiền nhận trên shop
+                                </label>
+                                <input readonly="readonly" placeholder="110000"
+                                    class="focus:tw-outline-none tw-pt-3 tw-px-2 tw-h-12 tw-rounded tw-border-2 tw-border-gray-300 tw-w-full tw-text-sm tw-font-semibold tw-placeholder-gray-800 focus:tw-placeholder-white tw-transition tw-duration-200 tw-text-red-700">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="atm"
+        class="hidden tw-preview tw-fixed tw-top-0 tw-right-0 tw-left-0 tw-bottom-0 tw-flex tw-items-center tw-justify-center tw-p-2 justify-center items-center"
+        style="z-index: 2000;  overflow-y: auto; max-height: 100vh;" aria-hidden="true">
+        <div class="tw-relative tw-max-w-md tw-w-full tw-mx-auto tw-bg-white tw-rounded">
+            <span
+                class="tw-absolute tw-px-3 tw-h-8 tw-w-8 tw-flex tw-items-center tw-justify-center tw-border-4 tw-border-white tw-rounded-full tw-text-sm tw-font-bold tw-cursor-pointer tw-py-1 tw-text-white tw-bg-gray-800"
+                style="top: -15px; right: -5px; z-index: 100;" data-modal-toggle="atm">
+                <i class="bx bx-x"></i>
+            </span>
+            <div
+                class="tw-bg-gray-200 tw-text-gray-800 tw-font-semibold tw-text-center tw-rounded-t tw-grid tw-grid-cols-12 tw-gap-0">
+                <div class="tw-col-span-12 tw-py-3 tw-flex tw-px-4 tw-rounded-t tw-font-bold"><img
+                        class="tw-w-6 tw-h-6 tw-mr-2 lazyLoad isLoaded" src="/bank.png"> CHUYỂN QUA NGÂN HÀNG</div>
+            </div>
+            <div class="tw-p-2 md:tw-p-4">
+                <div>
+                    <div class="tw-grid tw-grid-cols-12 tw-gap-2">
+                        <div class="tw-col-span-12 md:tw-col-span-8">
+                            <div class="relative tw-text-sm tw-text-red-600 tw-leading-6">
+                                <p><span style="color: rgb(0, 0, 0);">
+                                        <strong>THÔNG TIN TÀI KHOẢN NGÂN HÀNG</strong></span></p>
+                                <p style="margin-left: 0px;"><span style="color: rgb(0, 0, 0);"><strong>NGÂN HÀNG:
+                                        </strong></span><span
+                                        style="color: rgb(230, 77, 77);"><strong>ACB</strong></span></p>
+                                <p style="margin-left: 0px;"><span style="color: rgb(0, 0, 0);"><strong>SỐ TÀI KHOẢN:
+                                        </strong></span><a href="tel:3491637"><strong>3491637</strong></a></p>
+                                <p style="margin-left: 0px;"><span style="color: rgb(0, 0, 0);"><strong>CHỦ TÀI KHOẢN:
+                                        </strong></span><span style="color: rgb(230, 77, 77);"><strong>BAN TUAN
+                                            LE</strong></span></p>
+                            </div> <button
+                                class="focus:tw-outline-none tw-px-2 tw-h-6 tw-bg-gray-500 hover:tw-bg-gray-600 tw-rounded tw-text-xs tw-font-bold tw-text-white tw-uppercase">
+                                Copy số tài khoản
+                            </button>
+                        </div>
+                        <div class="tw-col-span-12 md:tw-col-span-4"><img
+                                class="tw-mx-auto tw-h-25 tw-h-25 md:tw-h-25 sm:tw-h-5"
+                                src="https://img.vietqr.io/image/acb-3491637-qr_only.jpg?amount=0&amp;addInfo=NAP &amp;accountName=BAN TUAN LE">
+                        </div>
+                    </div>
+                    <div class="tw-border-b tw-border-gray-200 tw-my-3"></div>
+                    <div class="tw-my-2">
+                        <p class="tw-font-semibold tw-text-sm tw-mb-1">
+                            Nội dung chuyển khoản:
+                        </p>
+                        <div class="tw-relative">
+                            <input readonly="readonly" value="NAP"
+                                class="tw-h-10 tw-px-3 tw-border-2 tw-border-red-500 tw-text-lg tw-border-dashed tw-rounded tw-w-full tw-text-red-600 tw-font-extrabold focus:tw-outline-none">
+                        </div>
+                        <button id="button-momo-surcharge-submit" class="
+tw-my-2 tw-text-uppercase tw-bg-red-600
+hover:tw-bg-red-500
+tw-h-10 tw-font-semibold tw-rounded tw-text-white tw-px-3
+">
+                            Xác nhận. Tôi đã chuyển
+                        </button>
+                        <div class="tw-mt-1 tw-text-sm tw-font-semibold tw-text-red-600"><i>Lưu ý: Sau khi chuyển khoản
+                                xong, hãy chờ "vài phút" rồi ấn
+                                <b>"Xác nhận. Tôi đã chuyển"</b>.
+                            </i></div>
+                        <div class="tw-mt-2 tw-font-semibold tw-text-sm">
+                            <i class="tw-ml-3 bx bxs-upvote"></i> Khi chuyển khoản qua Ngân hàng (ATM) bạn cần ghi nội
+                            dung
+                            <b class="tw-mx-1 tw-text-red-600">NAP </b>
+                            bên trên.
+                        </div>
+                        <div class="tw-mt-1 tw-font-semibold tw-text-sm tw-text-red-600">
+                            <i>
+                                <p>
+                                    Các giao dịch chuyển sai "Nội dung chuyển khoản" sẽ không được xử lý tự động. Hãy
+                                    liên hệ Fanpage để được hỗ trợ.
+                                </p>
+                            </i>
+                        </div>
+                    </div>
+                    <div class="tw-border-b tw-border-gray-200 tw-my-3"></div>
+                </div>
+                <!---->
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+
+        $("body").on('click', '#button-momo', function (e) {
+
+            var $this = $(this);
+
+            $.ajax({
+                url: '/transaction/momo',
+                type: 'post',
+                data: {
+                    uid: ""
+                },
+                beforeSend: function () {
+                    $('#button-momo').text('Đang xử lý');
+                },
+                complete: function () {
+                    $('#button-momo').text('Kiểm tra');
+                },
+                success: function (json) {
+
+                    alert(json);
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                }
+            });
+
+
+
+        });
+
+
+    </script>
+
+
+
+
+    <script>
+
+
+        $("body").on('click', '#button-momo-surcharge-submit', function (e) {
+
+            var $this = $(this);
+
+            $.ajax({
+                url: '/body/vietcombank/',
+                type: 'post',
+                data: {
+                    uid: ""
+                },
+                beforeSend: function () {
+                    $('#button-momo-surcharge-submit').text('Đang xử lý');
+                },
+                complete: function () {
+                    $('#button-momo-surcharge-submit').text('Kiểm tra');
+                },
+                success: function (json) {
+                    if (json.err == 1) {
+                        alert(json);
+                        window.location = '/';
+                    } else {
+                        alert(json);
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                }
+            });
+
+
+
+        });
+
+
+    </script>
+
+    <div id="momo"
+        class="hidden tw-preview tw-fixed tw-top-0 tw-right-0 tw-left-0 tw-bottom-0 tw-flex tw-items-center tw-justify-center tw-p-2 justify-center items-center"
+        style="z-index: 2000; background: rgba(93, 93, 93, 0.77); overflow-y: auto; max-height: 100vh;"
+        aria-hidden="true">
+        <div data-v-69ffd940="" class="
+tw-relative tw-max-w-md tw-w-full tw-mx-auto tw-bg-white tw-rounded
+"><span data-v-69ffd940="" class="
+tw-absolute
+tw-px-3
+tw-h-8
+tw-w-8
+tw-flex
+tw-items-center
+tw-justify-center
+tw-border-4
+tw-border-white
+tw-rounded-full
+tw-text-sm
+tw-font-bold
+tw-cursor-pointer
+tw-py-1
+tw-text-white
+tw-bg-gray-800
+" style="top: -15px; right: -5px; z-index: 100;" data-modal-toggle="momo"><i data-v-69ffd940=""
+                    class="bx bx-x"></i></span>
+            <div data-v-69ffd940="" class="
+tw-bg-gray-200
+tw-text-gray-800
+tw-font-semibold
+tw-text-center
+tw-rounded-t
+tw-grid
+tw-grid-cols-12
+tw-gap-0
+">
+                <div data-v-69ffd940="" class="
+tw-col-span-12 tw-py-3 tw-flex tw-px-4 tw-rounded-t tw-font-bold
+"><img data-v-69ffd940="" class="tw-w-6 tw-h-6 tw-mr-2 lazyLoad isLoaded" src="/momo.png"> CHUYỂN KHOẢN QUA
+                    MOMO
+                </div>
+            </div>
+
+            <div class="tw-p-2 md:tw-p-4">
+                <div>
+                    <div class="tw-grid tw-grid-cols-12 tw-gap-2">
+                        <div class="tw-col-span-12 md:tw-col-span-8">
+                            <div class="relative tw-text-sm tw-text-red-600 tw-leading-6">
+                                <p><span style="color: rgb(0, 0, 0);">
+                                        <strong>THÔNG TIN TÀI KHOẢN MOMO</strong></span></p>
+                                <p style="margin-left: 0px;"><span style="color: rgb(0, 0, 0);"><strong>VÍ MOMO:
+                                        </strong></span><span
+                                        style="color: rgb(230, 77, 77);"><strong>MOMO</strong></span></p>
+                                <p style="margin-left: 0px;"><span style="color: rgb(0, 0, 0);"><strong>SỐ TÀI KHOẢN:
+                                        </strong></span><a href="tel:3491637"><strong>0833280702</strong></a></p>
+                                <p style="margin-left: 0px;"><span style="color: rgb(0, 0, 0);"><strong>CHỦ TÀI KHOẢN:
+                                        </strong></span><span style="color: rgb(230, 77, 77);"><strong>BAN TUAN
+                                            LE</strong></span></p>
+                            </div> <button
+                                class="focus:tw-outline-none tw-px-2 tw-h-6 tw-bg-gray-500 hover:tw-bg-gray-600 tw-rounded tw-text-xs tw-font-bold tw-text-white tw-uppercase">
+                                Copy số tài khoản
+                            </button>
+                        </div>
+                        <div class="tw-col-span-12 md:tw-col-span-4"><img
+                                class="tw-mx-auto tw-h-25 tw-h-25 md:tw-h-25 sm:tw-h-5"
+                                src="https://api.qrserver.com/v1/create-qr-code/?size=250x150&amp;data=2|99|0833280702|||0|0|10000|NAP |transfer_myqr">
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div data-v-69ffd940="" class="tw-border-b tw-border-gray-200 tw-my-3"></div>
+                <div data-v-69ffd940="" class="tw-my-2">
+                    <p data-v-69ffd940="" class="tw-font-semibold tw-text-sm tw-mb-1">
+                        Nội dung <b data-v-69ffd940="" class="tw-text-red-500">ghi chú</b> khi chuyển:
+                    </p>
+
+
+                    <div class="tw-relative">
+                        <input readonly="readonly" value="NAP "
+                            class="tw-h-10 tw-px-3 tw-border-2 tw-border-red-500 tw-text-lg tw-border-dashed tw-rounded tw-w-full tw-text-red-600 tw-font-extrabold focus:tw-outline-none">
+
+                    </div>
+
+                    <!-- <button data-v-69ffd940="" class="
+tw-bg-pink-700
+hover:tw-bg-pink-600
+tw-px-4
+tw-h-6
+tw-text-white
+tw-flex
+tw-items-center
+tw-py-1
+tw-absolute
+tw-text-sm
+tw-font-semibold
+tw-rounded 
+" style="top: 8px; right: 8px;">
+COPY NỘI DUNG
+</button> -->
+                </div>
+
+                <button id="button-momo" class="
+tw-my-2 tw-text-uppercase tw-bg-red-600
+hover:tw-bg-red-500
+tw-h-10 tw-font-semibold tw-rounded tw-text-white tw-px-3
+">
+                    Xác nhận. Tôi đã chuyển
+                </button>
+
+
+
+
+
+
+                <div data-v-69ffd940="" class="tw-mt-2 tw-font-semibold tw-text-sm"><i data-v-69ffd940=""
+                        class="tw-ml-3 bx bxs-upvote"></i> Khi chuyển khoản qua ví Momo
+                    bạn cần ghi nội dung ghi chú
+                    <b data-v-69ffd940="" class="tw-mx-1 tw-text-pink-700">nap </b>
+                    bên trên.
+                </div>
+                <div data-v-69ffd940="" class="tw-mt-1 tw-font-semibold tw-text-sm tw-text-red-600">
+                    <p data-v-69ffd940="">
+                        Lưu ý: Nếu quá 30 phút không nhận được tiền, vui lòng liên hệ page
+                        hỗ trợ!
+                    </p> <i data-v-69ffd940="">- Các giao dịch chuyển sai "Nội dung ghi chú" sẽ không được xử lý
+                        tự động. Hãy liên hệ Fanpage để được hỗ trợ.
+                    </i>
+                </div>
+            </div>
+            <div data-v-69ffd940="" class="tw-border-b tw-border-gray-200 tw-my-3"></div>
+        </div> <!---->
+    </div>
+</section>
